@@ -18,7 +18,7 @@ import 'antd/lib/upload/style/css';
 import 'antd/lib/message/style/css';
 import 'antd/lib/tooltip/style/css';
 
-import variables from './variables';
+import variables from './Variables';
 
 const bodyFontSize = `${variables.fs3}`;
 

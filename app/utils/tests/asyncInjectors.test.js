@@ -8,11 +8,13 @@ import { fromJS } from 'immutable';
 
 import configureStore from 'store';
 
+/* eslint-disable import/no-unresolved, import/extensions */
 import {
   injectAsyncReducer,
   injectAsyncSagas,
   getAsyncInjectors,
-} from '../async-injectors';
+} from 'utils/AsyncInjectors';
+/* eslint-enable import/no-unresolved, import/extensions */
 
 // Fixtures
 

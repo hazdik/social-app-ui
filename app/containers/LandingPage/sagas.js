@@ -18,10 +18,6 @@ function* authenticate() {
   const email = yield select(clientAuthEmail());
   const requestURL = getUrl(`/${process.env.RB_GOOGLE_AUTH_URL}`);
 
-  console.log("#######");
-  console.log(`${process.env.RB_GOOGLE_AUTH_URL}`);
-  console.log("#######");
-
   try {
     // Call our request helper (see 'utils/Request')
     const response = yield call(request, requestURL, 'POST',

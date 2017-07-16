@@ -7,7 +7,7 @@
 import Menu from 'antd/lib/menu';
 import styled from 'styled-components';
 
-import variables from '../../global-css/variables';
+import variables from '../../css/Variables';
 
 const linkColor = `${variables.brandColor1}`;
 const headerHeight = `${variables.headerHeight}`;

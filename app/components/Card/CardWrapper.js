@@ -7,7 +7,7 @@
 import Card from 'antd/lib/card';
 import styled from 'styled-components';
 
-import variables from '../../global-css/variables';
+import variables from '../../css/Variables';
 
 const color = `${variables.black}`;
 const headerHeight = '70px';

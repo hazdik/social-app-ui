@@ -7,7 +7,7 @@
 import styled from 'styled-components';
 import { lighten, darken } from 'polished';
 
-import variables from '../../global-css/variables';
+import variables from '../../css/Variables';
 
 const borderColor = lighten(0.05, `${variables.brandColor2}`);
 const backgroundColor = darken(0.05, `${variables.brandColor2}`);

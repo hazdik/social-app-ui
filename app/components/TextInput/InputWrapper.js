@@ -7,7 +7,7 @@
 import Input from 'antd/lib/input';
 import styled from 'styled-components';
 
-import variables from '../../global-css/variables';
+import variables from '../../css/Variables';
 
 const borderColor = `${variables.grey}`;
 const bodyFontSize = `${variables.fs3}`;

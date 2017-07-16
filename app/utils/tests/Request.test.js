@@ -2,8 +2,8 @@
  * Test the request function
  */
 
-import request from '../request';
-import '../localstorage-mock';
+import request from '../Request';
+import '../LocalstorageMock';
 
 describe('request', () => {
   // Before each test, stub the fetch function

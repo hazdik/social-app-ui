@@ -7,7 +7,7 @@
 import Layout from 'antd/lib/layout';
 import styled from 'styled-components';
 
-import variables from '../../global-css/variables';
+import variables from '../../css/Variables';
 
 const backgroundColor = `${variables.white}`;
 const marginLeft = `${variables.leftSidebarWidth}`;
