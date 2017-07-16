@@ -6,8 +6,10 @@
 import { combineReducers } from 'redux-immutable';
 import { fromJS } from 'immutable';
 import { LOCATION_CHANGE } from 'react-router-redux';
+import { browserHistory } from 'react-router';
 
 import languageProviderReducer from 'containers/LanguageProvider/reducer';
+import currentUserReducer from 'containers/App/reducer';
 
 /*
  * routeReducer
@@ -18,8 +20,9 @@ import languageProviderReducer from 'containers/LanguageProvider/reducer';
  */
 
 // Initial routing state
+const routePayload = browserHistory.getCurrentLocation();
 const routeInitialState = fromJS({
-  locationBeforeTransitions: null,
+  locationBeforeTransitions: routePayload,
 });
 
 /**
@@ -44,6 +47,7 @@ export default function createReducer(asyncReducers) {
   return combineReducers({
     route: routeReducer,
     language: languageProviderReducer,
+    currentUser: currentUserReducer,
     ...asyncReducers,
   });
 }

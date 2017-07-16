@@ -12,18 +12,20 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class App extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
-
-  static propTypes = {
-    children: React.PropTypes.node,
-  };
-
+class App extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <div>
+      <div className="app">
         {React.Children.toArray(this.props.children)}
       </div>
     );
   }
 }
+
+App.propTypes = {
+  children: PropTypes.node,
+};
+
+export default App;

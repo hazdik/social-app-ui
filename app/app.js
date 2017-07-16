@@ -21,7 +21,7 @@ import 'sanitize.css/sanitize.css';
 import App from 'containers/App';
 
 // Import selector for `syncHistoryWithStore`
-import { makeSelectLocationState } from 'containers/App/selectors';
+import { locationState } from 'containers/App/selectors';
 
 // Import Language Provider
 import LanguageProvider from 'containers/LanguageProvider';
@@ -39,7 +39,7 @@ import configureStore from './store';
 import { translationMessages } from './i18n';
 
 // Import CSS reset and Global Styles
-import './global-styles';
+import './global-css/global-styles';
 
 // Import root routes
 import createRoutes from './routes';
@@ -55,7 +55,7 @@ const store = configureStore(initialState, browserHistory);
 // is under the non-default key ("routing"), selectLocationState
 // must be provided for resolving how to retrieve the "route" in the state
 const history = syncHistoryWithStore(browserHistory, store, {
-  selectLocationState: makeSelectLocationState(),
+  selectLocationState: locationState(),
 });
 
 // Set up the router, wrapping all Routes in the App component
@@ -111,6 +111,3 @@ if (!window.Intl) {
 // Install ServiceWorker and AppCache in the end since
 // it's not most important operation and if main code fails,
 // we do not want it installed
-if (process.env.NODE_ENV === 'production') {
-  require('offline-plugin/runtime').install(); // eslint-disable-line global-require
-}

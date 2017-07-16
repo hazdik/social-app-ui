@@ -11,15 +11,31 @@
 
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
+import Row from 'antd/lib/row';
+import Col from 'antd/lib/col';
 
+import SidebarCombo from 'components/Layout/SidebarCombo';
+import CardWrapper from 'components/Card';
 import messages from './messages';
 
 export default class NotFound extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <h1>
-        <FormattedMessage {...messages.header} />
-      </h1>
+      <SidebarCombo>
+        <div className="page">
+          <Row>
+            <Col className="row" span={24} style={{ marginBottom: 24 }}>
+              <div className="box">
+                <CardWrapper>
+                  <h3>
+                    <FormattedMessage {...messages.header} />
+                  </h3>
+                </CardWrapper>
+              </div>
+            </Col>
+          </Row>
+        </div>
+      </SidebarCombo>
     );
   }
 }
