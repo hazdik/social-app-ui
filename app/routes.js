@@ -6,7 +6,7 @@ import { browserHistory } from 'react-router';
 // about the code splitting business
 
 /* eslint-disable import/no-unresolved, import/extensions */
-import { getAsyncInjectors } from 'utils/AsyncInjectors';
+import { getAsyncInjectors } from './utils/AsyncInjectors';
 /* eslint-enable import/no-unresolved, import/extensions */
 
 const errorLoading = (err) => {
