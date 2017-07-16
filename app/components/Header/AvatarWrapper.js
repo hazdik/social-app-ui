@@ -5,7 +5,7 @@
 */
 
 import styled from 'styled-components';
-import Image from 'components/image';
+import Image from 'components/Image';
 
 const AvatarWrapper = styled(Image)`
   display: inline-flex;
