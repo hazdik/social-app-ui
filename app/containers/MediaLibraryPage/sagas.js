@@ -49,7 +49,7 @@ export function* updateMedia() {
   const name = yield select(mediaName());
   const description = yield select(mediaDescription());
   const url = yield select(mediaUrl());
-  const requestURL = `http://${process.env.RB_API_URI}/${process.env.RB_API_NAMESPACE}/media/${id}`;
+  const requestURL = `${process.env.RB_API_URI}/${process.env.RB_API_NAMESPACE}/media/${id}`;
 
   try {
     // Call our request helper (see 'utils/Request')
@@ -83,7 +83,7 @@ export function* watchUpdateMedia() {
 
 export function* saveMedia() {
   const url = yield select(mediaUrl());
-  const requestURL = `http://${process.env.RB_API_URI}/${process.env.RB_API_NAMESPACE}/media`;
+  const requestURL = `${process.env.RB_API_URI}/${process.env.RB_API_NAMESPACE}/media`;
 
   try {
     // Call our request helper (see 'utils/Request')

@@ -70,7 +70,7 @@ export function* watchGetComments() {
 export function* saveComment() {
   const comment = yield select(commentBody());
   const id = yield select(blogId());
-  const requestURL = `http://${process.env.RB_API_URI}/${process.env.RB_API_NAMESPACE}/blog_comments`;
+  const requestURL = `${process.env.RB_API_URI}/${process.env.RB_API_NAMESPACE}/blog_comments`;
 
   try {
     // Call our request helper (see 'utils/Request')
@@ -133,7 +133,7 @@ export function* updateBlog() {
   const id = yield select(blogId());
   const title = yield select(blogTitle());
   const body = yield select(blogBody());
-  const requestURL = `http://${process.env.RB_API_URI}/${process.env.RB_API_NAMESPACE}/blogs/${id}`;
+  const requestURL = `${process.env.RB_API_URI}/${process.env.RB_API_NAMESPACE}/blogs/${id}`;
 
   try {
     // Call our request helper (see 'utils/Request')

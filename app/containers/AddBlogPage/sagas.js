@@ -11,7 +11,7 @@ import { watchGetCurrentUser } from 'containers/App/sagas';
 export function* saveBlog() {
   const title = yield select(makeSelectBlogTitle());
   const body = yield select(makeSelectBlogBody());
-  const requestURL = `http://${process.env.RB_API_URI}/${process.env.RB_API_NAMESPACE}/blogs`;
+  const requestURL = `${process.env.RB_API_URI}/${process.env.RB_API_NAMESPACE}/blogs`;
 
   try {
     // Call our request helper (see 'utils/Request')
