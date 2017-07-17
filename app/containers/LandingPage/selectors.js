@@ -39,6 +39,21 @@ const clientAuthEmail = () => createSelector(
   (metadataState) => metadataState.get('metadata').get('client').profileObj.email
 );
 
+const clientAuthFirstName = () => createSelector(
+  selectLandingPageDomain(),
+  (metadataState) => metadataState.get('metadata').get('client').profileObj.givenName
+);
+
+const clientAuthLastName = () => createSelector(
+  selectLandingPageDomain(),
+  (metadataState) => metadataState.get('metadata').get('client').profileObj.familyName
+);
+
+const clientAuthAvatar = () => createSelector(
+  selectLandingPageDomain(),
+  (metadataState) => metadataState.get('metadata').get('client').profileObj.imageUrl
+);
+
 export {
   selectLandingPageDomain,
   auth,
@@ -46,4 +61,7 @@ export {
   isLoading,
   clientAuthToken,
   clientAuthEmail,
+  clientAuthFirstName,
+  clientAuthLastName,
+  clientAuthAvatar,
 };

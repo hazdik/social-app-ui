@@ -10,12 +10,15 @@ import {
 import request from 'utils/Request';
 import getUrl from 'utils/GetUrl';
 import {
-  clientAuthToken, clientAuthEmail,
+  clientAuthToken, clientAuthEmail, clientAuthFirstName, clientAuthLastName, clientAuthAvatar,
 } from 'containers/LandingPage/selectors';
 
 function* authenticate() {
   const token = yield select(clientAuthToken());
   const email = yield select(clientAuthEmail());
+  const firstName = yield select(clientAuthFirstName());
+  const lastName = yield select(clientAuthLastName());
+  const avatar = yield select(clientAuthAvatar());
   const requestURL = getUrl(`/${process.env.RB_GOOGLE_AUTH_URL}`);
 
   try {
@@ -27,6 +30,10 @@ function* authenticate() {
           attributes: {
             token,
             email,
+            auth_provider: 'Google',
+            first_name: firstName,
+            last_name: lastName,
+            avatar,
           },
         },
       },
