@@ -7,6 +7,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Icon from 'antd/lib/icon';
+import Link from 'components/Link';
+import Input from 'antd/lib/input';
 
 import Loader from 'components/Loader';
 import Dropdown from 'components/Dropdown';
@@ -22,6 +24,25 @@ function Header(props) {
       <MenuWrapper mode="horizontal">
         <MenuItemWrapper
           key="1"
+        >
+          <Link
+            to={'/'}
+            className="logo"
+          >
+            Socialify
+          </Link>
+        </MenuItemWrapper>
+        <MenuItemWrapper
+          key="2"
+        >
+          <Input
+            size="large"
+            placeholder="Search for members, job, people and more..."
+            style={{ width: 400 }}
+          />
+        </MenuItemWrapper>
+        <MenuItemWrapper
+          key="3"
           style={{ float: 'right' }}
         >
           <Dropdown overlay={<ProfileCard />}>

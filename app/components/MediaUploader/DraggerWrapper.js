@@ -18,6 +18,14 @@ const DraggerWrapper = styled(Dragger)`
     border: 2px dashed ${borderColor};
     padding: 20px;
     border-radius: 2px;
+
+    .ant-upload-drag-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+    }
   }
 
   .ant-upload-text {

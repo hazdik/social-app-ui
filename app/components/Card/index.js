@@ -11,16 +11,20 @@ import CardWrapper from './CardWrapper';
 
 function Card(props) {
   return (
-    <CardWrapper
-      {...props}
-    >
-      {React.Children.toArray(props.children)}
-    </CardWrapper>
+    <div className="card">
+      {props.author ? props.author : false}
+      <CardWrapper
+        {...props}
+      >
+        {React.Children.toArray(props.children)}
+      </CardWrapper>
+    </div>
   );
 }
 
 Card.propTypes = {
   children: PropTypes.node,
+  author: PropTypes.node,
 };
 
 export default Card;

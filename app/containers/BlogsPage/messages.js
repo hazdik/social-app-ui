@@ -18,4 +18,8 @@ export default defineMessages({
     id: 'app.containers.blogs-page.getNewBlogs',
     defaultMessage: 'Get new blogs',
   },
+  readMore: {
+    id: 'app.containers.blogs-page.readMore',
+    defaultMessage: 'Read more',
+  },
 });

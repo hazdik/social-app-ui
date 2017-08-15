@@ -10,17 +10,17 @@ import styled from 'styled-components';
 import variables from '../../css/Variables';
 
 const color = `${variables.greyDark}`;
-const activeColor = `${variables.white}`;
-const fontSize = `${variables.fs5}`;
-const fontWeight = `${variables.fw3}`;
+const activeColor = `${variables.black}`;
+const fontSize = `${variables.fs3}`;
+const fontWeight = `${variables.fw2}`;
 
 const LinkWrapper = styled(Link)`
   color: ${color} !important;
   font-size: ${fontSize};
+  font-weight: ${fontWeight};
   width: 100%;
   height: 100%;
   display: flex !important;
-  justify-content: center;
   align-items: center;
 
   &.active {

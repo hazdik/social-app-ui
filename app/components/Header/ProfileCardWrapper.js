@@ -5,23 +5,22 @@
 */
 
 import styled from 'styled-components';
-import { lighten, darken } from 'polished';
 
 import variables from '../../css/Variables';
 
-const borderColor = lighten(0.05, `${variables.brandColor2}`);
-const backgroundColor = darken(0.05, `${variables.brandColor2}`);
-const color = `${variables.greyLight}`;
+const borderColor = `${variables.grey}`;
+const backgroundColor = `${variables.white}`;
+const color = `${variables.black}`;
 const shadowColor = `${variables.greyDark}`;
-const hoverbackgroundColor = lighten(0.05, `${variables.brandColor2}`);
-const fontSize = `${variables.fs3}`;
+const hoverbackgroundColor = `${variables.grey}`;
+const fontSize = `${variables.fs2}`;
 
 const ProfileCardWrapper = styled.div`
   background-color: ${backgroundColor};
   border: 1px solid ${borderColor};
   width: 200px;
   border-radius: 2px;
-  box-shadow: 1px 1px 3px 1px ${shadowColor};
+  box-shadow: 1px 1px 15px -5px ${shadowColor};
 
   .profile-card__item {
     &:not(:last-child) {

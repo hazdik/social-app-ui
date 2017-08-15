@@ -81,7 +81,10 @@ export default class Blog extends React.Component { // eslint-disable-line react
                     </Button>
                   }
                 >
-                  <div dangerouslySetInnerHTML={this.createMarkup(this.props.body)} />
+                  <div
+                    className="card-body"
+                    dangerouslySetInnerHTML={this.createMarkup(this.props.body)}
+                  />
                 </Card>
               </div>
             </Col>

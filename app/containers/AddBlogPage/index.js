@@ -47,7 +47,7 @@ export class AddBlogPage extends React.Component { // eslint-disable-line react/
               { name: 'description', content: 'Description of AddBlogPage' },
             ]}
           />
-          <Card title="Add new blog">
+          <Card>
             <AddBlogForm
               onChange={(val) => this.props.updateAttributes(val)}
               onSave={() => this.props.saveBlogRequest()}

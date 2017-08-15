@@ -6,32 +6,17 @@
 
 import Layout from 'antd/lib/layout';
 import styled from 'styled-components';
-import { lighten, darken } from 'polished';
 
 import variables from '../../css/Variables';
 
-const logoBorderColor = darken(0.05, `${variables.brandColor2}`);
-const logoBackgroundColor = lighten(0.05, `${variables.brandColor2}`);
-const backgroundColor = `${variables.brandColor2}`;
-const headerHeight = `${variables.headerHeight}`;
-const sidebarWidth = `${variables.leftSidebarWidth}`;
-const shadowColor = `${variables.brandColor2}`;
+const sidebarWidth = `${variables.sidebarWidth}`;
 
 const { Sider } = Layout;
 
 const SiderWrapper = styled(Sider)`
-  background-color: ${backgroundColor} !important;
-  position: fixed !important;
-  height: 100vh;
+  background-color: transparent;
   width: ${sidebarWidth} !important;
-  box-shadow: 10px 5px 10px -10px ${shadowColor};
-
-  .logo {
-    background-color: ${logoBackgroundColor} !important;
-    height: ${headerHeight};
-    border-bottom: 1px solid ${logoBorderColor};
-    width: ${sidebarWidth};
-  }
+  padding: 20px 20px 0;
 `;
 
 export default SiderWrapper;

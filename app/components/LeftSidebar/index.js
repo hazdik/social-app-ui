@@ -6,7 +6,6 @@
 
 import React from 'react';
 import Icon from 'antd/lib/icon';
-import Tooltip from 'antd/lib/tooltip';
 import { FormattedMessage } from 'react-intl';
 
 import Link from 'components/Link';
@@ -23,56 +22,40 @@ function LeftSidebar() {
           key="1"
           className=" logo"
         >
-          <Tooltip
-            placement="right"
-            title={<FormattedMessage {...messages.home} />}
+          <Link
+            to={'/'}
+            activeClassName="active"
           >
-            <Link
-              to={'/'}
-              activeClassName="active"
-            >
-              <Icon type="home" />
-            </Link>
-          </Tooltip>
+            <Icon type="home" />
+            <FormattedMessage {...messages.home} />
+          </Link>
         </MenuItemWrapper>
         <MenuItemWrapper key="2">
-          <Tooltip
-            placement="right"
-            title={<FormattedMessage {...messages.blogs} />}
+          <Link
+            to={'/blogs'}
+            activeClassName="active"
           >
-            <Link
-              to={'/blogs'}
-              activeClassName="active"
-            >
-              <Icon type="file-text" />
-            </Link>
-          </Tooltip>
+            <Icon type="file-text" />
+            <FormattedMessage {...messages.blogs} />
+          </Link>
         </MenuItemWrapper>
         <MenuItemWrapper key="3">
-          <Tooltip
-            placement="right"
-            title={<FormattedMessage {...messages.mediaLibrary} />}
+          <Link
+            to={'/media'}
+            activeClassName="active"
           >
-            <Link
-              to={'/media'}
-              activeClassName="active"
-            >
-              <Icon type="picture" />
-            </Link>
-          </Tooltip>
+            <Icon type="picture" />
+            <FormattedMessage {...messages.mediaLibrary} />
+          </Link>
         </MenuItemWrapper>
         <MenuItemWrapper key="4">
-          <Tooltip
-            placement="right"
-            title={<FormattedMessage {...messages.addBlog} />}
+          <Link
+            to={'/add/blog'}
+            activeClassName="active"
           >
-            <Link
-              to={'/add/blog'}
-              activeClassName="active"
-            >
-              <Icon type="edit" />
-            </Link>
-          </Tooltip>
+            <Icon type="edit" />
+            <FormattedMessage {...messages.addBlog} />
+          </Link>
         </MenuItemWrapper>
       </MenuWrapper>
     </SiderWrapper>

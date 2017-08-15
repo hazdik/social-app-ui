@@ -5,9 +5,9 @@ const variables = {
   brandColor2: '#1F2D3D', // sidebar
 
   // colors
-  grey: '#E5E9F2', // borders
-  greyLight: lighten(0.05, '#E5E9F2'), // backgrounds
-  greyDark: darken(0.05, '#E5E9F2'),
+  grey: '#EEE', // borders
+  greyLight: lighten(0.25, '#EEE'), // backgrounds
+  greyDark: darken(0.25, '#EEE'),
 
   white: '#FFF',
 
@@ -16,7 +16,6 @@ const variables = {
   // measurements
   headerHeight: '60px',
   sidebarWidth: '200px',
-  leftSidebarWidth: '60px',
 
   // media-widths (lowest break points)
   bigScreen: '1200px',

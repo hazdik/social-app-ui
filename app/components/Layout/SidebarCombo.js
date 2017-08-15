@@ -25,7 +25,13 @@ class SidebarCombo extends React.Component { // eslint-disable-line react/prefer
             isLoading={this.props.isLoading}
           />
         </LayoutWrapper>
-        <LayoutWrapper className="ant-layout-has-sider">
+        <LayoutWrapper
+          className="ant-layout-has-sider"
+          style={{
+            width: '1200px',
+            margin: '60px auto 0',
+          }}
+        >
           <LeftSidebar />
           <ContentWrapper>
             {React.Children.toArray(this.props.children)}

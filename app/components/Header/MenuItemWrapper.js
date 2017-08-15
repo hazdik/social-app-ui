@@ -11,6 +11,10 @@ import variables from '../../css/Variables';
 
 const linkColor = `${variables.brandColor1}`;
 const headerHeight = `${variables.headerHeight}`;
+const logoFontSize = `${variables.fs5}`;
+const logoFontWeight = `${variables.fw3}`;
+const logoFontColor = `${variables.black}`;
+const searchFontSize = `${variables.fs2}`;
 
 const MenuItemWrapper = styled(Menu.Item)`
   border-bottom: none !important;
@@ -22,8 +26,20 @@ const MenuItemWrapper = styled(Menu.Item)`
   &.ant-menu-item-selected {
     border-bottom: none !important;
   }
+
   .active {
     color: ${linkColor} !important;
+  }
+
+  .logo {
+    font-size: ${logoFontSize};
+    font-weight: ${logoFontWeight};
+    color: ${logoFontColor} !important;
+  }
+
+  .ant-input {
+    border: none;
+    font-size: ${searchFontSize};
   }
 `;
 
