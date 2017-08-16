@@ -12,7 +12,7 @@ import CardWrapper from './CardWrapper';
 function Card(props) {
   return (
     <div className="card">
-      {props.author ? props.author : false}
+      {props['data-meta'] ? props['data-meta'] : false}
       <CardWrapper
         {...props}
       >
@@ -24,7 +24,7 @@ function Card(props) {
 
 Card.propTypes = {
   children: PropTypes.node,
-  author: PropTypes.node,
+  'data-meta': PropTypes.node,
 };
 
 export default Card;

@@ -3,7 +3,7 @@ import { eventChannel } from 'redux-saga';
 import { Socket } from 'phoenix';
 
 export function* connectToSocket() {
-  const socket = new Socket(`ws:${process.env.RB_API_URI}/socket`);
+  const socket = new Socket(`ws:${process.env.RB_SOCKET_API_URI}/socket`);
   socket.connect();
   return socket;
 }

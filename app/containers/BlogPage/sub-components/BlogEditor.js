@@ -81,7 +81,6 @@ export default class BlogEditor extends React.Component { // eslint-disable-line
                       <TextInput
                         placeholder="Title of the blog"
                         value={this.state.title}
-                        autosize={{ minRows: 4, maxRows: 6 }}
                         style={{ marginBottom: 24 }}
                         onChange={this.handleChange}
                         disabled={this.props.saving}
@@ -91,7 +90,6 @@ export default class BlogEditor extends React.Component { // eslint-disable-line
                         type="textarea"
                         placeholder="Body of the blog"
                         value={this.state.body}
-                        autosize={{ minRows: 4 }}
                         onChange={this.handleChange}
                         disabled={this.props.saving}
                         name="body"

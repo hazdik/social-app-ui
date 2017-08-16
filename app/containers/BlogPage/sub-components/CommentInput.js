@@ -60,7 +60,6 @@ export default class CommentInput extends React.Component { // eslint-disable-li
                 type="textarea"
                 placeholder="Write a comment"
                 value={this.state.value}
-                autosize={{ minRows: 4, maxRows: 6 }}
                 onChange={this.handleChange}
                 disabled={this.props.saving}
               />

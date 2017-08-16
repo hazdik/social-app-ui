@@ -41,10 +41,8 @@ export default class BlogsList extends React.Component { // eslint-disable-line 
                   <div className="feed-card">
                     <Card
                       title={blog.attributes.title}
-                      author={
-                        <div
-                          className="feed-card__meta"
-                        >
+                      data-meta={
+                        <div className="feed-card__meta">
                           <div className="meta__avatar">
                             <img
                               src="https://lh4.googleusercontent.com/-AFFfk87qRL0/AAAAAAAAAAI/AAAAAAAAGhs/6WEDDZ5iVhE/s96-c/photo.jpg"

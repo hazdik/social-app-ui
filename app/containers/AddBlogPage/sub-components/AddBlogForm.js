@@ -70,7 +70,6 @@ export default class AddBlogForm extends React.Component { // eslint-disable-lin
               <TextInput
                 placeholder="Title"
                 value={this.state.title}
-                autosize={{ minRows: 4, maxRows: 6 }}
                 style={{ marginBottom: 24 }}
                 onChange={this.handleChange}
                 disabled={this.props.saving}
@@ -80,7 +79,6 @@ export default class AddBlogForm extends React.Component { // eslint-disable-lin
                 type="textarea"
                 placeholder="Description"
                 value={this.state.body}
-                autosize={{ minRows: 4 }}
                 onChange={this.handleChange}
                 disabled={this.props.saving}
                 name="body"

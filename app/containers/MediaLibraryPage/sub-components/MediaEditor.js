@@ -99,7 +99,6 @@ export default class MediaEditor extends React.Component { // eslint-disable-lin
                       <TextInput
                         placeholder="Name of the media"
                         value={this.state.name}
-                        autosize={{ minRows: 4, maxRows: 6 }}
                         style={{ marginBottom: 24 }}
                         onChange={this.handleChange}
                         disabled={this.props.saving}
