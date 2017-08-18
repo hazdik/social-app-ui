@@ -106,27 +106,23 @@ export default class MediaList extends React.Component { // eslint-disable-line 
       <div className="media">
         {this.addMediaModalNode()}
         {this.editMediaModalNode()}
+        <Button
+          type="primary"
+          size="large"
+          className="u-right u-mb-30"
+          onClick={() => this.setAddMediaModalVisible(true)}
+        >
+          Add Media
+        </Button>
         <div className="box">
-          <Card
-            title="Media Library"
-            extra={
-              <Button
-                type="primary"
-                size="large"
-                onClick={() => this.setAddMediaModalVisible(true)}
-              >
-                Add Media
-              </Button>
-            }
-          >
+          <Card>
             <Row gutter={24}>
               { [...this.props.media].reverse().map((media) =>
                 // http://stackoverflow.com/questions/30019923/react-rendering-a-list-in-reverse-order#comment69686732_38860263
                 <Col
-                  className="row"
-                  md={6}
+                  className="row u-mb-20"
+                  md={8}
                   key={media.id}
-                  style={{ marginBottom: 24 }}
                 >
                   <Media
                     onClick={() => this.setEditMediaModalVisible(true, media.id)}

@@ -16,17 +16,15 @@ import FormWrapper from './FormWrapper';
 function Form(props) {
   return (
     <FormWrapper>
-      <div className="form-body">
+      <div className="form">
         {React.Children.toArray(props.children)}
       </div>
       <FooterWrapper>
-        <span className="word-count">
-          {props.wordCount ? `${props.wordCount}` : false}
-        </span>
         {props.error ? props.error.message : false}
         <Button
           type="primary"
           size="large"
+          className="u-right"
           onClick={props.onClick}
           disabled={props.disabled}
         >
@@ -46,7 +44,6 @@ Form.propTypes = {
     PropTypes.bool,
     PropTypes.object,
   ]),
-  wordCount: PropTypes.number,
 };
 
 export default Form;

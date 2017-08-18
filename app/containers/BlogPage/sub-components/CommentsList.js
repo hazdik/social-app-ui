@@ -22,9 +22,8 @@ export default class CommentsList extends React.Component { // eslint-disable-li
   loadingCommentNode() {
     return (
       <Col
-        className="row"
+        className="row u-mb-20"
         md={24}
-        style={{ marginBottom: 24 }}
       >
         <div className="box">
           <Card loading />
@@ -47,13 +46,14 @@ export default class CommentsList extends React.Component { // eslint-disable-li
     return (
       <div className="comments">
         <Col
-          className="row"
+          className="row u-mb-20"
           md={24}
-          style={{ marginBottom: 24 }}
         >
           <div className="box">
             <Card>
-              No comments so far!
+              <div className="card-body">
+                No comments so far!
+              </div>
             </Card>
           </div>
         </Col>
@@ -85,14 +85,15 @@ export default class CommentsList extends React.Component { // eslint-disable-li
           { [...this.props.comments].reverse().map((comment) =>
             // http://stackoverflow.com/questions/30019923/react-rendering-a-list-in-reverse-order#comment69686732_38860263
             <Col
-              className="row"
+              className="row u-mb-30"
               md={24}
               key={comment.id}
-              style={{ marginBottom: 24 }}
             >
               <div className="box">
                 <Card title="John Doe">
-                  {comment.attributes.body}
+                  <div className="card-body">
+                    {comment.attributes.body}
+                  </div>
                 </Card>
               </div>
             </Col>

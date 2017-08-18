@@ -70,9 +70,9 @@ export default class AddBlogForm extends React.Component { // eslint-disable-lin
               <TextInput
                 placeholder="Title"
                 value={this.state.title}
-                style={{ marginBottom: 24 }}
                 onChange={this.handleChange}
                 disabled={this.props.saving}
+                className="u-mb-20"
                 name="title"
               />
               <TextInput

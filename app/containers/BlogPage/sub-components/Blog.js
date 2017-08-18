@@ -64,22 +64,20 @@ export default class Blog extends React.Component { // eslint-disable-line react
           {this.editMediaModalNode()}
           <Row>
             <Col
-              className="row"
+              className="row u-mb-30"
               md={24}
-              style={{ marginBottom: 24 }}
             >
+              <Button
+                type="primary"
+                size="large"
+                className="u-right u-mb-30"
+                onClick={() => this.setEditModalVisible(true)}
+              >
+                Edit
+              </Button>
               <div className="box">
                 <Card
                   title={this.props.title}
-                  extra={
-                    <Button
-                      type="primary"
-                      size="large"
-                      onClick={() => this.setEditModalVisible(true)}
-                    >
-                      Edit
-                    </Button>
-                  }
                 >
                   <div
                     className="card-body"

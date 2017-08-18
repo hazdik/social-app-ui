@@ -81,7 +81,7 @@ export default class BlogEditor extends React.Component { // eslint-disable-line
                       <TextInput
                         placeholder="Title of the blog"
                         value={this.state.title}
-                        style={{ marginBottom: 24 }}
+                        className="u-mb-20"
                         onChange={this.handleChange}
                         disabled={this.props.saving}
                         name="title"

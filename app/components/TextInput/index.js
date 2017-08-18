@@ -11,14 +11,21 @@ import InputWrapper from './InputWrapper';
 
 function TextInput(props) {
   return (
-    <div>
-      <label htmlFor={props.name}>
-        {props.placeholder}
-      </label>
+    <div className="text-input">
+      { !props.noLabel ?
+        <label htmlFor={props.name}>
+          {props.placeholder}
+        </label>
+        : false
+      }
       <InputWrapper
         disabled={props.saving}
         autoComplete="off"
-        {...props}
+        type={props.type}
+        name={props.name}
+        placeholder={props.placeholder}
+        value={props.value}
+        onChange={props.onChange}
       />
     </div>
   );
@@ -26,7 +33,11 @@ function TextInput(props) {
 
 TextInput.propTypes = {
   saving: PropTypes.bool,
+  noLabel: PropTypes.bool,
   name: PropTypes.string,
+  type: PropTypes.string,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
   placeholder: PropTypes.string,
 };
 

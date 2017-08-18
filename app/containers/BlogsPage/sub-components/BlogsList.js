@@ -31,10 +31,9 @@ export default class BlogsList extends React.Component { // eslint-disable-line 
           { [...this.props.blogs].reverse().map((blog) =>
             // http://stackoverflow.com/questions/30019923/react-rendering-a-list-in-reverse-order#comment69686732_38860263
             <Col
-              className="row"
+              className="row u-mb-30"
               md={24}
               key={blog.id}
-              style={{ marginBottom: 24 }}
             >
               <div className="box">
                 <Link to={`/blogs/${blog.id}`}>

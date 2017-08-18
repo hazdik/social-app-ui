@@ -56,9 +56,8 @@ export class BlogsPage extends React.Component { // eslint-disable-line react/pr
     return (
       <Row key={1}>
         <Col
-          className="row"
+          className="row u-mb-20"
           md={24}
-          style={{ marginBottom: 24 }}
         >
           <Button
             type="primary"

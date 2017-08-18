@@ -12,9 +12,6 @@ const borderColor = `${variables.grey}`;
 const backgroundColor = `${variables.greyLight}`;
 
 const FooterWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 10px;
   background-color: ${backgroundColor};
   border: 1px solid ${borderColor};

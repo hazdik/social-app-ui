@@ -43,30 +43,28 @@ export default class CommentInput extends React.Component { // eslint-disable-li
 
   render() {
     return (
-      <div className="comment-input">
-        <Row>
-          <Col
-            className="row"
-            md={24}
-            style={{ marginBottom: 24 }}
+      <Row>
+        <Col
+          className="row"
+          md={24}
+        >
+          <Form
+            onClick={this.handleSubmit}
+            disabled={!this.state.value || this.props.saving}
+            saving={this.props.saving}
+            wordCount={this.state.value ? this.state.value.split(' ').length : 0}
           >
-            <Form
-              onClick={this.handleSubmit}
-              disabled={!this.state.value || this.props.saving}
-              saving={this.props.saving}
-              wordCount={this.state.value ? this.state.value.split(' ').length : 0}
-            >
-              <TextInput
-                type="textarea"
-                placeholder="Write a comment"
-                value={this.state.value}
-                onChange={this.handleChange}
-                disabled={this.props.saving}
-              />
-            </Form>
-          </Col>
-        </Row>
-      </div>
+            <TextInput
+              type="textarea"
+              placeholder="Write a comment"
+              value={this.state.value}
+              onChange={this.handleChange}
+              disabled={this.props.saving}
+              noLabel
+            />
+          </Form>
+        </Col>
+      </Row>
     );
   }
 }

@@ -14,7 +14,7 @@ const headerHeight = `${variables.headerHeight}`;
 const { Content } = Layout;
 
 const ContentWrapper = styled(Content)`
-  padding: 20px 20px 0;
+  padding: 30px 30px 0;
   height: 100%;
   min-height: calc(100vh - ${headerHeight});
 `;

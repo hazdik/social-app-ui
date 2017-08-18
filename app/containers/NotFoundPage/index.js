@@ -24,7 +24,10 @@ export default class NotFound extends React.PureComponent { // eslint-disable-li
       <SidebarCombo>
         <div className="page">
           <Row>
-            <Col className="row" span={24} style={{ marginBottom: 24 }}>
+            <Col
+              className="row u-mb-20"
+              span={24}
+            >
               <div className="box">
                 <CardWrapper>
                   <h3>

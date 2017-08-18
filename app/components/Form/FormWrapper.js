@@ -7,7 +7,7 @@
 import styled from 'styled-components';
 
 const FormWrapper = styled.div`
-  .form-body {
+  .form {
     display: flex;
     flexDirection: column;
   }

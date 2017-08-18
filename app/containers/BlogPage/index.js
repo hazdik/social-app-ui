@@ -113,13 +113,16 @@ export class BlogPage extends React.Component { // eslint-disable-line react/pre
             ]}
           />
           { this.blogNode() }
-          <Card
-            title={`comments (${this.props.comments.length})`}
-            className="comments-card"
-          >
-            {this.commentInputNode()}
-            {this.commentListNode()}
-          </Card>
+          <div className="comments">
+            <div className="card-container u-mb-30 comments__input">
+              <Card>
+                {this.commentInputNode()}
+              </Card>
+            </div>
+            <div className="card-container u-mb-30 comments__list">
+              {this.commentListNode()}
+            </div>
+          </div>
         </div>
       </SidebarCombo>
     );

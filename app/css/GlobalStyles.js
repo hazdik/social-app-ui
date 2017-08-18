@@ -124,4 +124,20 @@ injectGlobal`
       }
     }
   }
+
+  .u-right {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .u- {
+    &mb-20 {
+      margin-bottom: 20px;
+    }
+
+    &mb-30 {
+      margin-bottom: 30px;
+    }
+  }
+
 `;
