@@ -26,6 +26,7 @@ function TextInput(props) {
         placeholder={props.placeholder}
         value={props.value}
         onChange={props.onChange}
+        className={props.className}
       />
     </div>
   );
@@ -39,6 +40,7 @@ TextInput.propTypes = {
   value: PropTypes.string,
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default TextInput;

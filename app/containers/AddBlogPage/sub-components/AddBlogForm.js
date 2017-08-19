@@ -6,6 +6,7 @@ import { browserHistory } from 'react-router';
 
 import Form from 'components/Form';
 import TextInput from 'components/TextInput';
+import RichTextInput from 'components/RichTextInput';
 
 export default class AddBlogForm extends React.Component { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
@@ -23,6 +24,7 @@ export default class AddBlogForm extends React.Component { // eslint-disable-lin
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleRichTextInputChange = this.handleRichTextInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -30,6 +32,12 @@ export default class AddBlogForm extends React.Component { // eslint-disable-lin
   handleChange(e) {
     this.setState({
       [e.target.name]: e.target.value,
+    });
+  }
+
+  handleRichTextInputChange(body) {
+    this.setState({
+      body,
     });
   }
 
@@ -75,11 +83,11 @@ export default class AddBlogForm extends React.Component { // eslint-disable-lin
                 className="u-mb-20"
                 name="title"
               />
-              <TextInput
+              <RichTextInput
                 type="textarea"
                 placeholder="Description"
                 value={this.state.body}
-                onChange={this.handleChange}
+                onChange={this.handleRichTextInputChange}
                 disabled={this.props.saving}
                 name="body"
               />

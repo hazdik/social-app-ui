@@ -30,6 +30,7 @@ const cardAuthorFontWeight = `${variables.fw3}`;
 const cardFontColor = `${variables.black}`;
 const cardMetaTimeColor = `${variables.greyDark}`;
 const labelFontWeight = `${variables.fw2}`;
+const borderColor = `${variables.grey}`;
 
 /* eslint no-unused-expressions: 0 */
 injectGlobal`
@@ -54,12 +55,12 @@ injectGlobal`
   p,
   label {
     font-size: ${bodyFontSize};
-    line-height: 1.5em;
-    display: inline-flex;
+    line-height: 1.5rem;
     margin-bottom: 5px;
   }
 
   label {
+    display: inline-flex;
     font-weight: ${labelFontWeight};
   }
 
@@ -140,4 +141,10 @@ injectGlobal`
     }
   }
 
+  .rich-text-input-editor {
+    border: 1px solid ${borderColor};
+    border-radius: 2px;
+    padding: 10px 20px;
+    font-size: ${bodyFontSize};
+  }
 `;
