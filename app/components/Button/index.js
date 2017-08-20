@@ -11,16 +11,18 @@ import ButtonWrapper from './ButtonWrapper';
 
 function Button(props) {
   return (
-    <ButtonWrapper
-      type={props.type}
-      loading={props.loading}
-      onClick={props.onClick}
-      size={props.size}
-      style={props.style}
-      icon={props.icon}
-    >
-      {props.text}
-    </ButtonWrapper>
+    <div className="c-button">
+      <ButtonWrapper
+        type={props.type}
+        loading={props.loading}
+        onClick={props.onClick}
+        size={props.size}
+        style={props.style}
+        icon={props.icon}
+      >
+        {props.text}
+      </ButtonWrapper>
+    </div>
   );
 }
 

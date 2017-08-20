@@ -16,29 +16,31 @@ import LayoutWrapper from './sub-components/LayoutWrapper';
 class SidebarCombo extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <LayoutWrapper>
+      <div className="l-sidebar-combo">
         <LayoutWrapper>
-          <Header
-            avatar={this.props.avatar}
-            firstName={this.props.firstName}
-            lastName={this.props.lastName}
-            isLoading={this.props.isLoading}
-          />
+          <LayoutWrapper>
+            <Header
+              avatar={this.props.avatar}
+              firstName={this.props.firstName}
+              lastName={this.props.lastName}
+              isLoading={this.props.isLoading}
+            />
+          </LayoutWrapper>
+          <LayoutWrapper
+            className="ant-layout-has-sider"
+            style={{
+              width: '1200px',
+              margin: '60px auto 0',
+            }}
+          >
+            <LeftSidebar />
+            <ContentWrapper>
+              {React.Children.toArray(this.props.children)}
+            </ContentWrapper>
+            <RightSidebar />
+          </LayoutWrapper>
         </LayoutWrapper>
-        <LayoutWrapper
-          className="ant-layout-has-sider"
-          style={{
-            width: '1200px',
-            margin: '60px auto 0',
-          }}
-        >
-          <LeftSidebar />
-          <ContentWrapper>
-            {React.Children.toArray(this.props.children)}
-          </ContentWrapper>
-          <RightSidebar />
-        </LayoutWrapper>
-      </LayoutWrapper>
+      </div>
     );
   }
 }

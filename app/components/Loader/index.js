@@ -10,7 +10,9 @@ import SpinWrapper from './SpinWrapper';
 
 function Loader() {
   return (
-    <SpinWrapper />
+    <div className="c-loader">
+      <SpinWrapper />
+    </div>
   );
 }
 

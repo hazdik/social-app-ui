@@ -11,7 +11,7 @@ import InputWrapper from './InputWrapper';
 
 function TextInput(props) {
   return (
-    <div className="text-input">
+    <div className="c-text-input">
       { !props.noLabel ?
         <label htmlFor={props.name}>
           {props.placeholder}

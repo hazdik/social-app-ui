@@ -35,7 +35,7 @@ class MediaUploader extends React.Component { // eslint-disable-line react/prefe
 
   render() {
     return (
-      <div className="media-uploader">
+      <div className="c-media-uploader">
         <Row>
           <Col
             className="row"

@@ -12,11 +12,13 @@ import ImageWrapper from './ImageWrapper';
 
 function Image(props) {
   return (
-    <ImageWrapper
-      className={props.className}
-      src={props.src}
-      alt={props.alt}
-    />
+    <div className="o-image">
+      <ImageWrapper
+        className={props.className}
+        src={props.src}
+        alt={props.alt}
+      />
+    </div>
   );
 }
 

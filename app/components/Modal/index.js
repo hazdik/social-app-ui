@@ -12,24 +12,26 @@ import ModalWrapper from './ModalWrapper';
 
 function Modal(props) {
   return (
-    <ModalWrapper
-      width={800}
-      wrapClassName="vertical-center-modal"
-      footer={[
-        <Button
-          key="submit"
-          type="primary"
-          size="large"
-          loading={props.loading}
-          onClick={props.onOk}
-        >
-          Close
-        </Button>,
-      ]}
-      {...props}
-    >
-      {React.Children.toArray(props.children)}
-    </ModalWrapper>
+    <div className="c-modal">
+      <ModalWrapper
+        width={800}
+        wrapClassName="vertical-center-modal"
+        footer={[
+          <Button
+            key="submit"
+            type="primary"
+            size="large"
+            loading={props.loading}
+            onClick={props.onOk}
+          >
+            Close
+          </Button>,
+        ]}
+        {...props}
+      >
+        {React.Children.toArray(props.children)}
+      </ModalWrapper>
+    </div>
   );
 }
 

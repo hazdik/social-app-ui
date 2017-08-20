@@ -7,7 +7,7 @@
 import Card from 'antd/lib/card';
 import styled from 'styled-components';
 
-import variables from '../../css/Variables';
+import variables from '../../css/variables';
 
 const color = `${variables.black}`;
 const fontSize = `${variables.fs6}`;

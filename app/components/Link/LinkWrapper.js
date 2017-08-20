@@ -7,7 +7,7 @@
 import { Link } from 'react-router';
 import styled from 'styled-components';
 
-import variables from '../../css/Variables';
+import variables from '../../css/variables';
 
 const color = `${variables.greyDark}`;
 const activeColor = `${variables.black}`;

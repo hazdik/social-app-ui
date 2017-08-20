@@ -15,23 +15,25 @@ import FormWrapper from './FormWrapper';
 
 function Form(props) {
   return (
-    <FormWrapper>
-      <div className="form">
-        {React.Children.toArray(props.children)}
-      </div>
-      <FooterWrapper>
-        {props.error ? props.error.message : false}
-        <Button
-          type="primary"
-          size="large"
-          className="u-right"
-          onClick={props.onClick}
-          disabled={props.disabled}
-        >
-          {props.saving ? <FormattedMessage {...messages.saving} /> : <FormattedMessage {...messages.save} />}
-        </Button>
-      </FooterWrapper>
-    </FormWrapper>
+    <div className="c-form">
+      <FormWrapper>
+        <div className="form">
+          {React.Children.toArray(props.children)}
+        </div>
+        <FooterWrapper>
+          {props.error ? props.error.message : false}
+          <Button
+            type="primary"
+            size="large"
+            className="u-right"
+            onClick={props.onClick}
+            disabled={props.disabled}
+          >
+            {props.saving ? <FormattedMessage {...messages.saving} /> : <FormattedMessage {...messages.save} />}
+          </Button>
+        </FooterWrapper>
+      </FormWrapper>
+    </div>
   );
 }
 

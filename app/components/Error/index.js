@@ -14,7 +14,7 @@ import messages from './messages';
 
 function Error(props) {
   return (
-    <div className="error">
+    <div className="c-error">
       <Alert
         message={props.message}
         type="error"

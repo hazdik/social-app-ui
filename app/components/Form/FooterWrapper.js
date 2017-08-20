@@ -6,7 +6,7 @@
 
 import styled from 'styled-components';
 
-import variables from '../../css/Variables';
+import variables from '../../css/variables';
 
 const borderColor = `${variables.grey}`;
 const backgroundColor = `${variables.greyLight}`;

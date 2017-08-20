@@ -10,9 +10,11 @@ import DropdownWrapper from './DropdownWrapper';
 
 function Dropdown(props) {
   return (
-    <DropdownWrapper
-      {...props}
-    />
+    <div className="c-dropdown">
+      <DropdownWrapper
+        {...props}
+      />
+    </div>
   );
 }
 

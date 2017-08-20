@@ -10,9 +10,8 @@ import { EditorState, convertToRaw } from 'draft-js';
 import draftToHtml from 'draftjs-to-html';
 import { Editor } from 'react-draft-wysiwyg';
 
-import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-
 import Options from './options';
+import Wrapper from './Wrapper';
 
 export default class RichTextInput extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
@@ -38,22 +37,24 @@ export default class RichTextInput extends React.Component { // eslint-disable-l
     const { editorState } = this.state;
 
     return (
-      <div className="text-input">
-        { !this.props.noLabel ?
-          <label htmlFor={this.props.name}>
-            {this.props.placeholder}
-          </label>
-          : false
-        }
-        <Editor
-          editorState={editorState}
-          wrapperClassName="rich-text-input-wrapper"
-          editorClassName="rich-text-input-editor"
-          onEditorStateChange={this.handleChange}
-          toolbar={Options}
-          className={this.props.className}
-          placeholder={this.props.placeholder}
-        />
+      <div className="c-rich-text-input">
+        <Wrapper>
+          { !this.props.noLabel ?
+            <label htmlFor={this.props.name}>
+              {this.props.placeholder}
+            </label>
+            : false
+          }
+          <Editor
+            editorState={editorState}
+            wrapperClassName="rich-text-input-wrapper"
+            editorClassName="rich-text-input-editor"
+            onEditorStateChange={this.handleChange}
+            toolbar={Options}
+            className={this.props.className}
+            placeholder={this.props.placeholder}
+          />
+        </Wrapper>
       </div>
     );
   }

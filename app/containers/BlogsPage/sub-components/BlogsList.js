@@ -61,7 +61,7 @@ export default class BlogsList extends React.Component { // eslint-disable-line 
                         className="card-body"
                         dangerouslySetInnerHTML={this.createMarkup(`${blog.attributes.body.substring(0, this.constructor.DESCRIPTION_LENGTH)}...`)}
                       />
-                      <div className="read-more">
+                      <div className="u-read-more">
                         <FormattedMessage {...messages.readMore} />
                       </div>
                     </Card>

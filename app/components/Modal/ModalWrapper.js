@@ -7,7 +7,7 @@
 import Modal from 'antd/lib/modal';
 import styled from 'styled-components';
 
-import variables from '../../css/Variables';
+import variables from '../../css/variables';
 
 const backgroundColor = `${variables.greyLight}`;
 

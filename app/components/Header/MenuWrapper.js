@@ -7,7 +7,7 @@
 import Menu from 'antd/lib/menu';
 import styled from 'styled-components';
 
-import variables from '../../css/Variables';
+import variables from '../../css/variables';
 
 const headerHeight = `${variables.headerHeight}`;
 const width = `${variables.bigScreen}`;

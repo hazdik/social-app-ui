@@ -20,53 +20,55 @@ import ProfileCard from './ProfileCard';
 
 function Header(props) {
   return (
-    <HeaderWrapper>
-      <MenuWrapper mode="horizontal">
-        <MenuItemWrapper
-          key="1"
-        >
-          <Link
-            to={'/'}
-            className="logo"
+    <div className="c-header">
+      <HeaderWrapper>
+        <MenuWrapper mode="horizontal">
+          <MenuItemWrapper
+            key="1"
           >
-            Socialify
-          </Link>
-        </MenuItemWrapper>
-        <MenuItemWrapper
-          key="2"
-        >
-          <Input
-            size="large"
-            placeholder="Search for members, job, people and more..."
-            style={{ width: 400 }}
-          />
-        </MenuItemWrapper>
-        <MenuItemWrapper
-          key="3"
-          style={{ float: 'right' }}
-        >
-          <Dropdown overlay={<ProfileCard />}>
-            <a className="ant-dropdown-link" >
-              { props.isLoading ?
-                <Loader />
-              :
-                [
-                  <AvatarWrapper
-                    key={1}
-                    src={props.avatar}
-                    alt={`${props.firstName} ${props.lastName}`}
-                  />,
-                  <Icon
-                    key={2}
-                    type="down"
-                  />,
-                ]
-              }
-            </a>
-          </Dropdown>
-        </MenuItemWrapper>
-      </MenuWrapper>
-    </HeaderWrapper>
+            <Link
+              to={'/'}
+              className="logo"
+            >
+              Socialify
+            </Link>
+          </MenuItemWrapper>
+          <MenuItemWrapper
+            key="2"
+          >
+            <Input
+              size="large"
+              placeholder="Search for members, job, people and more..."
+              style={{ width: 400 }}
+            />
+          </MenuItemWrapper>
+          <MenuItemWrapper
+            key="3"
+            style={{ float: 'right' }}
+          >
+            <Dropdown overlay={<ProfileCard />}>
+              <a className="ant-dropdown-link" >
+                { props.isLoading ?
+                  <Loader />
+                :
+                  [
+                    <AvatarWrapper
+                      key={1}
+                      src={props.avatar}
+                      alt={`${props.firstName} ${props.lastName}`}
+                    />,
+                    <Icon
+                      key={2}
+                      type="down"
+                    />,
+                  ]
+                }
+              </a>
+            </Dropdown>
+          </MenuItemWrapper>
+        </MenuWrapper>
+      </HeaderWrapper>
+    </div>
   );
 }
 

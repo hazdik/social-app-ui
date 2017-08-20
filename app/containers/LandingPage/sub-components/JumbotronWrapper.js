@@ -6,7 +6,7 @@
 
 import styled from 'styled-components';
 
-import variables from '../../../css/Variables';
+import variables from '../../../css/variables';
 
 const marginTop = `${variables.headerHeight}`;
 const backgroundColor = `${variables.brandColor1}`;

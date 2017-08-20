@@ -11,11 +11,13 @@ import LinkWrapper from './LinkWrapper';
 
 function Link(props) {
   return (
-    <LinkWrapper
-      {...props}
-    >
-      {React.Children.toArray(props.children)}
-    </LinkWrapper>
+    <div className="o-link">
+      <LinkWrapper
+        {...props}
+      >
+        {React.Children.toArray(props.children)}
+      </LinkWrapper>
+    </div>
   );
 }
 

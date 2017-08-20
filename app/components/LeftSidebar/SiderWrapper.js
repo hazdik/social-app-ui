@@ -7,7 +7,7 @@
 import Layout from 'antd/lib/layout';
 import styled from 'styled-components';
 
-import variables from '../../css/Variables';
+import variables from '../../css/variables';
 
 const sidebarWidth = `${variables.sidebarWidth}`;
 
